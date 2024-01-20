@@ -1,3 +1,54 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react",
+    "react-hooks"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    // 자바스크립트 버전, 7은 ECMA2016
+    "ecmaVersion": 7,
+    // jsx 허용을 설정, back-end 설정이기 때문에 사용 안함
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "ignorePatterns": ["node_modules/"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "react/function-component-definition":[
+      2,
+      { "namedComponents": [
+        "arrow-function",
+        "function-declaration"
+      ] }
+    ],
+    "prettier/prettier": ["warn"], // Or "error" if you prefer
+    "next/link-passhref": ["off"],
+    "next/no-img-element": "off", // if you prefer to use <img> tags directly
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "lines-around-directive": ["off"],
+    "react/jsx-no-useless-fragment": ["off"],
+    "import/prefer-default-export": ["off"], // export const 문을 쓸때 에러를 내는 규칙을 끔
+    "import/no-extraneous-dependencies": ["off",{"devDependencies": true}]
+  }
 }
