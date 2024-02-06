@@ -18,9 +18,6 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import HomeIcon from '@mui/icons-material/Home';
 import StarIcon from '@mui/icons-material/Star';
 import ChecklistIcon from '@mui/icons-material/Checklist';
-import SettingsIcon from '@mui/icons-material/Settings';
-import SupportIcon from '@mui/icons-material/Support';
-import LogoutIcon from '@mui/icons-material/Logout';
 import theme from '@/theme';
 import ReactQueryProviders from '@/utils/react-query-provider';
 import ClientOnly from '@/app/ClientOnly';
@@ -36,12 +33,6 @@ const LINKS = [
   { text: 'Home', href: '/', icon: HomeIcon },
   { text: 'Starred', href: '/starred', icon: StarIcon },
   { text: 'Tasks', href: '/tasks', icon: ChecklistIcon },
-];
-
-const PLACEHOLDER_LINKS = [
-  { text: `Settings`, icon: SettingsIcon },
-  { text: 'Support', icon: SupportIcon },
-  { text: 'Logout', icon: LogoutIcon },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -88,19 +79,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {LINKS.map(({ text, href, icon: Icon }) => (
                     <ListItem key={href} disablePadding>
                       <ListItemButton component={Link} href={href}>
-                        <ListItemIcon>
-                          <Icon />
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-                <Divider sx={{ mt: 'auto' }} />
-                <List>
-                  {PLACEHOLDER_LINKS.map(({ text, icon: Icon }) => (
-                    <ListItem key={text} disablePadding>
-                      <ListItemButton>
                         <ListItemIcon>
                           <Icon />
                         </ListItemIcon>
