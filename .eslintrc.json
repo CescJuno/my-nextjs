@@ -1,12 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "react",
-    "react-hooks"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks"],
   "parserOptions": {
     "project": "./tsconfig.json",
     "sourceType": "module",
@@ -34,14 +29,8 @@
     "prettier"
   ],
   "rules": {
-    "react/function-component-definition":[
-      2,
-      { "namedComponents": [
-        "arrow-function",
-        "function-declaration"
-      ] }
-    ],
-    "prettier/prettier": ["warn"], // Or "error" if you prefer
+    "react/function-component-definition": [2, { "namedComponents": ["arrow-function", "function-declaration"] }],
+    "prettier/prettier": ["off"], // Or "error" if you prefer
     "next/link-passhref": ["off"],
     "next/no-img-element": "off", // if you prefer to use <img> tags directly
     "react-hooks/rules-of-hooks": "error",
@@ -49,6 +38,6 @@
     "lines-around-directive": ["off"],
     "react/jsx-no-useless-fragment": ["off"],
     "import/prefer-default-export": ["off"], // export const 문을 쓸때 에러를 내는 규칙을 끔
-    "import/no-extraneous-dependencies": ["off",{"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["off", { "devDependencies": true }]
   }
 }
