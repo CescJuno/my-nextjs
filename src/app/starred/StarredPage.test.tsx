@@ -13,7 +13,7 @@ import StarredPage from "./page";
 const server = setupServer(
   rest.get("/api/getTodos", (req, res, ctx) => {
     return res(ctx.json([{ id: 1, title: "Test Todo" }]));
-  }),
+  })
 );
 
 beforeAll(() => server.listen());
@@ -30,7 +30,7 @@ describe("StarredPage component", () => {
     server.use(
       rest.get("/api/getTodos", (req, res, ctx) => {
         return res(ctx.status(500));
-      }),
+      })
     );
     const { result } = renderHook(() => useGetTodosQuery(), {
       wrapper: createWrapper(),
