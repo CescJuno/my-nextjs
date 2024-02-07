@@ -41,8 +41,6 @@ export default function StarredPage() {
               tooltip='aaaasdfsdfsdfsdfsdfsdfsdsdf'
               component={<TextField size='small' />}
             />
-            <LabelBox label='기간' component={<TextField size='small' />} />
-            <LabelBox label='aaaa' component={<TextField size='small' />} />
           </Grid>
           <Grid item xs={12} md={4}>
             <LabelBox
@@ -53,17 +51,6 @@ export default function StarredPage() {
                   <FormControlLabel label='aaa' control={<CheckBox />} />
                   <FormControlLabel label='aaa' control={<CheckBox />} />
                 </FormGroup>
-              }
-            />
-            <LabelBox
-              label='aaaa'
-              component={
-                <RadioGroup row name='position' defaultValue='top' sx={{ ml: -1 }}>
-                  <FormControlLabel value='female' control={<Radio color='secondary' />} label='Female' />
-                  <FormControlLabel value='male' control={<Radio color='secondary' />} label='Male' />
-                  <FormControlLabel value='other' control={<Radio color='secondary' />} label='Other' />
-                  <FormControlLabel value='disabled' disabled control={<Radio color='secondary' />} label='other' />
-                </RadioGroup>
               }
             />
           </Grid>
@@ -78,7 +65,6 @@ export default function StarredPage() {
                 </FormGroup>
               }
             />
-            <LabelBox label='aaaa' component={<TextField size='small' />} />
           </Grid>
         </Grid>
       }
