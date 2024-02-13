@@ -4,7 +4,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Todo } from "@/api/types";
-import useGetTodosQuery from "@/hooks/useGetTodosQuery";
+import useGetTodosQuery from "@/hooks/queries/useGetTodosQuery";
 import Link from "next/link";
 import ListGrid from "@/components/grid/ListGrid";
 import { Breadcrumbs, Stack, Grid, TextField, FormGroup, FormControlLabel } from "@mui/material";

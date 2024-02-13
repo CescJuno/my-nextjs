@@ -7,7 +7,7 @@ import { renderHook, screen, waitFor } from "@testing-library/react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { renderWithClient, createWrapper } from "@/mocks/utils";
-import useGetTodosQuery from "@/hooks/useGetTodosQuery";
+import useGetTodosQuery from "@/hooks/queries/useGetTodosQuery";
 import StarredPage from "./page";
 
 const server = setupServer(
